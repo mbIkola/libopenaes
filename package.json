@@ -1,0 +1,33 @@
+{
+  "name": "libopenaes-wasm",
+  "version": "1.0.0",
+  "description": "OpenAES as WASM module. ",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test",
+    "build-wa": "wa compile -D __WEBASSEMBLY__ -l -O src/openaes.c -I./include -o ./dist/wa/openaes.wasm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbIkola/libopenaes.git"
+  },
+  "keywords": [
+    "openaes",
+    "spizheno",
+    "wasm",
+    "webassembly"
+  ],
+  "author": "Nickolay \"mbIkola\" Kharchevin <kharchevyn@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbIkola/libopenaes/issues"
+  },
+  "homepage": "https://github.com/mbIkola/libopenaes#readme",
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "webassembly": "^0.11.0"
+  }
+}
