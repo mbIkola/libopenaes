@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.3)
 
-project(test)
+project(tests)
 
 enable_testing()
 include(DownloadProject)
@@ -26,6 +26,6 @@ add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR} EXCLUDE_FROM_
 
 file(COPY data DESTINATION .)
 
-add_executable(runUnitTests gtest.cpp ${test_SRCS})
-target_link_libraries(runUnitTests gtest gmock libopenaes)
-add_test(runUnitTests runUnitTests)
+add_executable(${PROJECT_NAME} gtest.cpp ${test_SRCS})
+target_link_libraries(${PROJECT_NAME} gtest gmock libopenaes)
+add_test(${PROJECT_NAME} runUnitTests)
